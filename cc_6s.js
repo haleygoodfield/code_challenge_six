@@ -1,6 +1,6 @@
 // Task 1: Function Declaration 
 // Write a function calculateProfit(costPrice, sellingPrice, unitsSold) that calculates total profit
-function calculateProfit(costProfit, sellingPrice, unitsSold) {
+function calculateProfit(costPrice, sellingPrice, unitsSold) {
     let profit = (sellingPrice - costPrice) * unitsSold; // Formula
     return `Total Profit: $${profit}`;
 }
@@ -28,7 +28,7 @@ const calculateBonus = (salary, performanceRating) => {
   let bonusPercent = performanceRating === "Excellent" ? 0.2 : // 20% of salary
   performanceRating === "Good" ? 0.1 : // 10% of salary
   performanceRating === "Average" ? 0.05 : 0; // 5% of salary
-  let bonus = salary * bonusPercentage;
+  let bonus = salary * bonusPercent;
   return `Bonus: $${bonus}`;
 };
 
@@ -36,3 +36,14 @@ console.log(calculateBonus(5000, "Excellent")); // Expected output: "Bonus: $100
 console.log(calculateBonus(7000, "Good")); // Expected output: "Bonus: $700"
 
 
+
+// Task 4: Parameters and Aruguents
+// Write a function calculateSubscriptionCost(plan, months, discount = 0) that calculates cost
+function calculateSubcriptionCost(plan, months, discount = 0) {
+    const prices = { "Basic": 10, "Premium": 20, "Enterprise": 50};
+    let cost = (prices[plan] || 0) * months - discount;
+    return `Total Cost: $${cost}`;
+};
+
+console.log(calculateSubscriptionCost("Basic", 6, 10)); // Expected output: "Total Cost: $50"
+console.log(calculateSubscriptionCost("Premium", 12, 0)); // Expected output: "Total Cost: $240"
