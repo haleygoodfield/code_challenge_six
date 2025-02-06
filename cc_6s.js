@@ -71,3 +71,22 @@ console.log(applyBulkDiscount(orders, amount => amount > 500 ? amount * 0.9 : am
 
 
 
+// Task 7: Closures
+// Write a function createExpenseTracker() that returns another function to add expenses and keep a running total
+function createExpenseTracker() {
+    let totalExpenses = 0;
+    return function(amount) {
+        totalExpenses += amount;
+        return `Total Expenses: $${totalExpenses}`;
+    };
+};
+let tracker = createExpenseTracker();
+console.log(tracker(200)); // Expected output: "Total Expenses: $200"
+console.log(tracker(150)); // Expected output: "Total Expenses: $350"
+
+
+
+
+
+
+
