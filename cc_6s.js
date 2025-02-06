@@ -86,6 +86,19 @@ console.log(tracker(150)); // Expected output: "Total Expenses: $350"
 
 
 
+// Task 8: Recursion in JavaScript
+// Write a recursive function calculateYearsToPromotion(employeeLevel) that determines years to reach level 10
+function calculateYearsToPromotion(employeeLevel) {
+    if (employeeLevel >= 10) return `Years to Level 10: 0`;
+    return `Years to Level 10: ${2 * (10 -employeeLevel)}`;
+};
+console.log(calculateYearsToPromotion(7)); // Expected output: "Years to Level 10: 6"
+console.log(calculateYearsToPromotion(5)); // / Expected output: "Years to Level 10: 10"
+
+
+
+
+
 
 
 
